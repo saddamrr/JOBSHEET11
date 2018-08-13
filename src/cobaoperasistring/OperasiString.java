@@ -1,4 +1,7 @@
 package cobaoperasistring;
+
+import java.util.Locale;
+
 public class OperasiString {
     public static void main(String[] args) {
         String identitas = "SADDAM RAIHAN RAMADHAN / XRPL 2 / 30";
@@ -71,5 +74,11 @@ public class OperasiString {
         System.out.println("pecah berdasarkan huruf 'r' di variabel tclean : ");
         for(int i=0;i<arrTr.length;i++)
             System.out.println(arrTr[i]);
+        
+        double d = 1545454000;
+        System.out.println(String.format("Uang saya %,.4f", d));
+        
+        System.out.println(String.format(Locale.forLanguageTag("in-ID"),
+        "Uang saya RP %,.2f", d));
        }   
 }
